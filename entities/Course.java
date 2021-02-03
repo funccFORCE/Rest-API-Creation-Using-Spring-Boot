@@ -1,12 +1,17 @@
 package com.sample.sample.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Course {
-	private long id;
+	@Id
+	private int id;
 	private String title;
 	private String desc;
 	public Course(long id, String title, String desc) {
 		super();
-		this.id = id;
+		this.id = (int) id;
 		this.title = title;
 		this.desc = desc;
 	}
@@ -17,7 +22,7 @@ public class Course {
 	public long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getTitle() {
